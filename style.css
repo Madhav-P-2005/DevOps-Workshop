@@ -1,13 +1,27 @@
 body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-    color: white;
-    text-align: center;
-    padding-top: 100px;
+    background: linear-gradient(135deg, #1f4037, #99f2c8);
 }
 
-.container {
-    background: rgba(0,0,0,0.4);
+.card {
+    background: white;
     padding: 40px;
     border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.status {
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
 }
