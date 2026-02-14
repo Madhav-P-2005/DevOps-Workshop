@@ -1,27 +1,98 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --card-bg: #fff;
+    --primary-color: #007bff;
+    --btn-text: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --bg-color: #1a1a2e;
+    --text-color: #e0e0e0;
+    --card-bg: #16213e;
+    --primary-color: #0f3460;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1f4037, #99f2c8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .card {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 90%;
+    transition: background-color 0.3s;
 }
 
 h1 {
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
 }
 
-.status {
-    margin-top: 20px;
+.quote-text {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    min-height: 80px; /* Prevent layout jump */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-author {
+    font-size: 1rem;
     font-weight: bold;
-    color: green;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: var(--btn-text);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s, filter 0.2s;
+}
+
+.action-btn:hover {
+    filter: brightness(1.1);
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.2s;
+}
+
+.theme-btn:hover {
+    transform: rotate(15deg);
 }

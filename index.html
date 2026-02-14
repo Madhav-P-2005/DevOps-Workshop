@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>DevOps Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Quote Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
+    <button id="theme-toggle" class="theme-btn">
+        <i class="fas fa-moon"></i>
+    </button>
+
     <div class="card">
-        <h1>🚀 DevOps Dashboard</h1>
-        <p id="version"></p>
-        <p id="time"></p>
-        <p class="status">🟢 Deployment Successful</p>
+        <h1><i class="fas fa-quote-left"></i> DevOps Wisdom <i class="fas fa-quote-right"></i></h1>
+
+        <div class="quote-container">
+            <p id="quote" class="quote-text">Loading inspiration...</p>
+            <p id="author" class="quote-author"></p>
+        </div>
+
+        <button id="new-quote" class="action-btn">New Quote</button>
     </div>
 
     <script src="script.js"></script>
